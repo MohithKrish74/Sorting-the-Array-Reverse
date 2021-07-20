@@ -1,0 +1,35 @@
+package com.company;
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.print("Enter the size of the array: ");
+        Scanner in =new Scanner(System.in);
+        int size=in.nextInt();
+        int array[]=new int[size];
+        for(int i=0;i<size;i++)
+        {
+            array[i]=in.nextInt();
+        }
+        for(int i=0;i<size;i++)
+        {
+            for(int j=i+1;j<size;j++)
+            {
+                if(array[i]<array[j])
+                {
+                    int temp=array[i];
+                    array[i]=array[j];
+                    array[j]=temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(array));
+
+    }
+
+}
+
+
